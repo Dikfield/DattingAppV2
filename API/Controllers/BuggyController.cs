@@ -29,9 +29,9 @@ namespace API.Controllers
         {
             var thing = _context.Users.Find(-1);
 
-            if(thing ==null) return NotFound();
+            if(thing ==null) return NotFound("Not Found");
 
-            return Ok(thing);
+            return thing;
         }
 
         [HttpGet("server-error")]
